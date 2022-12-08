@@ -1,0 +1,36 @@
+env:
+  #TERM variable
+  
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+window:
+  opacity: 0.85
+
+font:
+  normal:
+    family: Cousine Nerd Font
+    style: Regular
+  bold:
+    family: Cousine Nerd Font
+    style: Bold
+  italic:
+    family: Cousine Nerd Font
+    style: Italic
+  size: 12
+
+cursor:
+  # Cursor style
+  #
+  # Values for 'style':
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Underline
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: false
