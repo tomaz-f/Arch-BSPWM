@@ -7,7 +7,11 @@ super + l
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
+
+# files
+super + e
+  nautilus
 
 # program launcher (Apps)
 super + d
