@@ -1,21 +1,18 @@
 #
 # wm independent hotkeys
 #
-# Logout Session
-super + l
-  dm-tool lock
 
 # terminal emulator
 super + Return
-	kitty
+	alacritty
 
-# files
-super + e
-  nautilus
+# program launcher
+super + shift + d
+	rofi -show run -theme Monokai
 
 # program launcher (Apps)
 super + d
-	rofi -show drun -show-icons
+	rofi -show drun -theme Monokai -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -128,23 +125,18 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # volume control
-XF86AudioRaiseVolume
-  pactl set-sink-volume 0 +5%
 XF86AudioLowerVolume
-  pactl set-sink-volume 0 -5%
+	amixer set Master 5%-
+XF86AudioRaiseVolume
+	amixer set Master 5%+
 XF86AudioMute
-  pactl set-sink-mute 0 toggle
+	amixer set Master toggle
 
 # brightness control
 XF86MonBrightnessDown
 	brillo -q -U 5
 XF86MonBrightnessUp
 	brillo -q -A 5
-
-# ScreenShot
-Print
-	flameshot gui
-
-# BetterLockScreen
+# lock screen
 super + x
 	betterlockscreen -l
